@@ -4,33 +4,62 @@
 " Open and search files
 let g:WhichKeyDesc_files                               = "<leader>f +Files"
 
-" Search File
-let g:WhichKeyDesc_files_search                        = "<leader>ff Search File"
+" Create
+let g:WhichKeyDesc_files_create                         = "<leader>fc Create"
+map <leader>fc <Action>(NewElement)
+
+" New dir.
+let g:WhichKeyDesc_new_dir                             = "<leader>fd Create directory"
+map <leader>fd <Action>(NewDir)
+
+" Search
+let g:WhichKeyDesc_files_search                        = "<leader>ff Search"
 map <leader>ff <Action>(GotoFile)
 
-" Select File in Project View
-let g:WhichKeyDesc_files_select_in_project_view        = "<leader>fF Select File In Project View"
-map <leader>fF <Action>(SelectInProjectView)
+" New .go
+let g:WhichKeyDesc_new_go_file                         = "<leader>fg Create .go"
+map <leader>fg <Action>(Go.NewGoFile)
 
-" Search Recent Files
-let g:WhichKeyDesc_files_recent_files                  = "<leader>fr Recent Files"
-map <leader>fr <Action>(RecentFiles)
+" Select in
+let g:WhichKeyDesc_files_select_in                     = "<leader>fi Select In"
+map <leader>fi <Action>(SelectIn)
 
-" Search Recently Changed Files
-let g:WhichKeyDesc_files_recent_files_changed          = "<leader>fR Recently CHANGED Files"
-map <leader>fR <Action>(RecentChangedFiles)
-
+" Recent Locations
 let g:WhichKeyDesc_files_recent_locations              = "<leader>fl Recent Locations"
 map <leader>fl <Action>(RecentLocations)
 
-" TODO find action for Recently Changed Locations
-" let g:WhichKeyDesc_files_recent_locations_changed    = "<leader>fL Recently CHANGED Locations"
-" map <leader>fL <Action>(?)
+" Menu
+let g:WhichKeyDesc_files_menu                          = "<leader>fm Menu"
+map <leader>fm <Action>(FileMenu)
 
 " Show navigation bar
 let g:WhichKeyDesc_files_navigation_bar                = "<leader>fn Navigation Bar"
 map <leader>fn <Action>(ShowNavBar)
 
-" Tab Switcher
-let g:WhichKeyDesc_files_tab_switcher                  = "<leader>ft Tab Switcher"
-map <leader>ft <Action>(Switcher)
+" Rename
+let g:WhichKeyDesc_files_rename_file             = "<leader>fN Rename"
+map <leader>fN <Action>(RenameFile)
+
+" Open
+let g:WhichKeyDesc_files_open_file_group               = "<leader>fo Open"
+map <leader>fo <Action>(OpenFile)
+
+" Select in Project View
+let g:WhichKeyDesc_files_select_in_project_view        = "<leader>fp Select In Project View"
+map <leader>fp <Action>(SelectInProjectView)
+
+" Search Recent
+let g:WhichKeyDesc_files_recent_files                  = "<leader>fr Recent"
+map <leader>fr <Action>(RecentFiles)
+
+" Search Recently Changed
+let g:WhichKeyDesc_files_recent_files_changed          = "<leader>fR Recently changed"
+map <leader>fR <Action>(RecentChangedFiles)
+
+" Scratch
+let g:WhichKeyDesc_files_scratch                       = "<leader>fs Scratch"
+map <leader>fs <Action>(NewScratchFile)
+
+" Delete
+let g:WhichKeyDesc_files_delete                        = "<leader>fu Update"
+map <leader>fu <Action>(UpdateActionGroup)

@@ -6,19 +6,17 @@
 
 " FIXME Recent Projects and Blackhole register does not initialize on startup. Only when you reload vimrc once does it work
 
-" Ergonomic escape - other alternative keys I used in the past: jk, <C-j>
-map <C-c> <Esc>
+" Ergonomic escape - other alternative keys I used in the past.
+inoremap jk <Esc>
+map <C-e> <Esc>
 
-" Easier navigation
-map H ^
-" NOTE: IdeaVim's smart join can be triggered using Ctrl + Shift + J
-map J 5j
-map K 5k
-map L $
+" Keep selection after indenting
+vnoremap < <gv
+vnoremap > >gv
 
-" Faster change/delete of a word
-map C ciw
-map D daw
+" Tab navigation
+noremap <C-n> :tabnext<CR>
+noremap <C-p> :tabprev<CR>
 
 " Forward/Back
 map <C-o> <Action>(Back)
@@ -45,10 +43,6 @@ map <CR> m`o<Esc>``
 " TIP: When in the Terminal, press Escape to switch focus back to the editor without closing Terminal
 map <C-t> <Action>(ActivateTerminalToolWindow)
 
-" Recent Projects
-let g:WhichKeyDesc_recent_projects    = "<leader>p Recent Projects"
-map <leader>p <Action>(RecentProjectListGroup)
-
 " Easier prefixing with blackhole register ("_)
     " Use case for blackhole register: deleting something while maintaining your current yanked code
     " Context: By default, yanking puts the selected text in the unnamed register ("").
@@ -58,7 +52,3 @@ map <leader>p <Action>(RecentProjectListGroup)
     " You can delete instead into the blackhole register by doing "_d to keep your yanked code in the unnamed register
 let g:WhichKeyDesc_blackhole_register = "<leader>\' Black Hole Register"
 map <leader>' "_
-
-" Deleting with "x" key puts it into blackhole register by default
-" Solves the use case mentioned above for the "x" key
-noremap x "_x

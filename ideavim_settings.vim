@@ -6,6 +6,7 @@
 " Join action will be performed via IDE
 " See https://github.com/JetBrains/ideavim/wiki/ideajoin-examples
 set ideajoin
+set idearefactormode=keep
 
 " Not really sure if these are needed or how exactly they affect my setup, but I put them just in case
 sethandler <C-h> a:vim

@@ -1,6 +1,11 @@
 """""""""""""""""""""""""""""""""""
 " Window Management & Navigation  "
 """""""""""""""""""""""""""""""""""
+
+" Shortcut
+let g:WhichKeyDesc_windows_switcher                        = "<leader>; Switcher"
+map <leader>; <Action>(Switcher)
+
 " Navigate and manage project/tool/tab windows
 let g:WhichKeyDesc_windows                                = "<leader>w +Windows"
 
@@ -8,9 +13,21 @@ let g:WhichKeyDesc_windows                                = "<leader>w +Windows"
 let g:WhichKeyDesc_windows_toggle_all_tool_windows        = "<leader>ww Toggle All Tool Windows"
 map <leader>ww <Action>(HideAllWindows)
 
+" Context actions
+let g:WhichKeyDesc_windows_context                        = "<leader>wc Working Context"
+map <leader>wc <Action>(working.context)
+
 " Jump to the last tool window
 let g:WhichKeyDesc_windows_jump_to_last_window            = "<leader>wj Jump to Last Tool Window"
 map <leader>wj <Action>(JumpToLastWindow)
+
+" List tab
+let g:WhichKeyDesc_windows_list_tabs                       = "<leader>wl List Tabs"
+map <leader>wl <Action>(TabList)
+
+" Pin tab
+let g:WhichKeyDesc_windows_pin_tab                        = "<leader>wp Pin Tab"
+map <leader>wp <Action>(PinActiveTab)
 
 " (macOS Only?) Merges all project windows into one window, making them like tabs
 let g:WhichKeyDesc_windows_merge_all_project_windows      = "<leader>wm Merge All Project Windows"

@@ -11,11 +11,11 @@ set surround
 
 "" Which-Key mapping descriptions
 " Disable the description
-let g:WhichKeyDesc_surround_change = "cs"
-let g:WhichKeyDesc_surround_delete = "ds"
-let g:WhichKeyDesc_surround_add = "ys"
+"let g:WhichKeyDesc_surround_change = "cs"
+"let g:WhichKeyDesc_surround_delete = "ds"
+"let g:WhichKeyDesc_surround_add = "ys"
 
 " Add custom descriptions - if you want these descriptions, just copy paste them into your ~/.ideavimrc file to override
-"let g:WhichKeyDesc_surround_change = "cs Change surrounding prefix (vim-surround)"
-"let g:WhichKeyDesc_surround_delete = "ds Delete surrounding prefix (vim-surround)"
-"let g:WhichKeyDesc_surround_add = "ys Add surrounding prefix (vim-surround)"
+let g:WhichKeyDesc_surround_change = "cs Change surrounding prefix (vim-surround)"
+let g:WhichKeyDesc_surround_delete = "ds Delete surrounding prefix (vim-surround)"
+let g:WhichKeyDesc_surround_add = "ys Add surrounding prefix (vim-surround)"
